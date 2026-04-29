@@ -1,0 +1,328 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f1ea;
+  color: #1e3932;
+  overflow-x: hidden;
+}
+
+.barra-navegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  background-color: transparent;
+}
+
+.logo-marca {
+  max-width: calc(100% - 52px);
+}
+
+.logo-marca img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 34px;
+}
+
+.menu-hamburguesa {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.menu-hamburguesa span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: #1e3932;
+  border-radius: 2px;
+}
+
+.seccion-principal {
+  background-color: #d4ccb4;
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.caja-foto-grande {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.caja-foto-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.columna-izquierda {
+  margin-bottom: 30px;
+}
+.texto-llamativo {
+  position: relative;
+  width: 90%;
+}
+
+.texto-llamativo p {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.texto-llamativo h1 {
+  font-size: 3.5rem;
+  color: white;
+  text-transform: uppercase;
+  line-height: 0.9;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.seccion-bebidas {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.seccion-bebidas h2{
+  color:#9a7453;
+}
+
+.contenedor-arcos {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.bebida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.forma-arco {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 3 / 4;
+  margin: 0 auto;
+  border-radius: 100px 100px 10px 10px;
+  overflow: hidden;
+}
+
+.bebida p {
+  margin-top: 10px;
+  min-height: 2.8em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.forma-arco img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seccion-info {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.texto-historia {
+  padding: 0 20px 0 0;
+  flex: 0 0 60%;
+}
+
+.texto-historia h2{
+  color:#9a7453
+}
+
+.texto-historia p{
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.foto-detalle {
+  flex: 0 0 40%;
+}
+
+.foto-detalle img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.boton-verde {
+  background-color: #688662;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.boton-verde, p{
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.separador {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 8px auto 22px;
+  padding: 0 50px;
+}
+
+.separador span {
+  flex: 1;
+  border-top: 3px solid #7a7f73;
+  border-radius: 15px;
+}
+
+.logo-separador {
+  width: auto;
+  height: 40px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.pie-pagina {
+  background-color: #53814b;
+  color: white;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.redes-sociales {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+}
+
+.icono-red {
+  width: 35px;
+  margin: 0 10px;
+}
+
+.links-finales {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.links-finales a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .seccion-principal {
+    height: 85vh;
+  }
+
+  .texto-llamativo {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+  }
+
+  .texto-llamativo h1 {
+    font-size: 6rem;
+  }
+
+  .contenedor-arcos {
+    gap: 24px;
+  }
+
+  .bebida p {
+    font-size: 1rem;
+  }
+
+  .seccion-info {
+    flex-direction: row;
+  }
+
+  .texto-historia {
+    flex-basis: 70%;
+  }
+
+  .foto-detalle {
+    flex-basis: 30%;
+  }
+
+  .links-finales {
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+  }
+
+.links-finales, p{
+  font-family: "Lexend Deca", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+}
+
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
