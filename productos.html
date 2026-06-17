@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuestros Productos - Starbucks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="cart.js"></script>
+  </head>
+  <body class="pagina-interior">
+    <nav class="barra-navegacion">
+      <div class="logo-marca">
+        <a href="index.html"><img src="imagenes/Starbuckslogo.png" alt="Starbucks Logo" /></a>
+      </div>
+      <div class="nav-derecha">
+        <a href="checkout.html" class="nav-carrito" aria-label="Ver carrito">
+          🛒<span class="cart-badge" id="cartBadge" hidden>0</span>
+        </a>
+        <button class="menu-hamburguesa" id="btnMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="overlay" id="overlay"></div>
+    <div class="menu-lateral" id="menuLateral">
+      <div class="menu-lateral-header">
+        <button class="btn-cerrar" id="btnCerrar">&#215;</button>
+      </div>
+      <nav class="menu-lateral-nav">
+        <a href="index.html">Home</a>
+        <a href="productos.html">Nuestros Productos</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="experiencia.html">Experiencia Starbucks</a>
+      </nav>
+    </div>
+
+    <section class="seccion-productos">
+      <h2 class="archivo-black-regular titulo-productos">NUESTROS PRODUCTOS</h2>
+
+      <div class="grupo-categoria">
+        <div class="banda-categoria">Bebidas frías</div>
+        <div class="contenedor-arcos">
+          <div class="tarjeta-producto">
+            <div class="forma-arco">
+              <img src="imagenes/Bebidachocolate.jpeg" alt="Mocha Cookie Crumble" />
+            </div>
+            <p>Mocha Cookie Crumble</p>
+            <p class="precio-producto">$14.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="mocha-cookie" data-nombre="Mocha Cookie Crumble" data-precio="14000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="mocha-cookie"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco">
+              <img src="imagenes/Bebidapistacho.jpg" alt="Pistacho Frappuccino" />
+            </div>
+            <p>Pistacho Frappuccino</p>
+            <p class="precio-producto">$8.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="pistacho-frapp" data-nombre="Pistacho Frappuccino" data-precio="8000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="pistacho-frapp"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco">
+              <img src="imagenes/Bebidacaramelo.jpg" alt="Caramel Frappuccino" />
+            </div>
+            <p>Caramel Frappuccino</p>
+            <p class="precio-producto">$12.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="caramel-frapp" data-nombre="Caramel Frappuccino" data-precio="12000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="caramel-frapp"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-categoria">
+        <div class="banda-categoria">Comida</div>
+        <div class="contenedor-arcos">
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/comida-croissant.jpg" alt="Pan au chocolat" />
+            </div>
+            <p>Pan au chocolat</p>
+            <p class="precio-producto">$6.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="pan-chocolat" data-nombre="Pan au chocolat" data-precio="6000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="pan-chocolat"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/comida-sandwich.jpg" alt="Sandwich de J&amp;Q" />
+            </div>
+            <p>Sandwich de J&amp;Q</p>
+            <p class="precio-producto">$9.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="sandwich-jq" data-nombre="Sandwich de J&amp;Q" data-precio="9000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="sandwich-jq"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/comida-muffin.jpg" alt="Muffin de chocolate" />
+            </div>
+            <p>Muffin de chocolate</p>
+            <p class="precio-producto">$5.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="muffin-choco" data-nombre="Muffin de chocolate" data-precio="5000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="muffin-choco"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo-categoria">
+        <div class="banda-categoria">En casa</div>
+        <div class="contenedor-arcos">
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/cafe-sirens-blend.jpg" alt="Siren's Blend" />
+            </div>
+            <p>Siren's Blend</p>
+            <p class="precio-producto">$15.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="sirens-blend" data-nombre="Siren's Blend" data-precio="15000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="sirens-blend"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/cafe-caffe-verona.jpg" alt="Caffè Verona" />
+            </div>
+            <p>Caffè Verona</p>
+            <p class="precio-producto">$18.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="caffe-verona" data-nombre="Caffè Verona" data-precio="18000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="caffe-verona"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+          <div class="tarjeta-producto">
+            <div class="forma-arco img-placeholder">
+              <img src="imagenes/cafe-veranda-blend.jpg" alt="Veranda Blend" />
+            </div>
+            <p>Veranda Blend</p>
+            <p class="precio-producto">$16.000</p>
+            <div class="acciones-producto">
+              <button class="btn-accion btn-carrito" data-id="veranda-blend" data-nombre="Veranda Blend" data-precio="16000"><img src="imagenes/icono-carrito.png" alt="Agregar al carrito" /></button>
+              <button class="btn-accion btn-wishlist" data-id="veranda-blend"><img src="imagenes/icono-corazon.png" alt="Favorito" /></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let listaDeseos = JSON.parse(localStorage.getItem('lista-deseos') || '[]');
+
+      function actualizarIconos() {
+        const items = Carrito.obtenerCarrito();
+        const idsEnCarrito = [];
+        for (let i = 0; i < items.length; i++) {
+          idsEnCarrito.push(items[i].id);
+        }
+
+        const botonesCarrito = document.getElementsByClassName('btn-carrito');
+        for (let i = 0; i < botonesCarrito.length; i++) {
+          if (idsEnCarrito.includes(botonesCarrito[i].dataset.id)) {
+            botonesCarrito[i].classList.add('activo');
+          } else {
+            botonesCarrito[i].classList.remove('activo');
+          }
+        }
+
+        const botonesCorazon = document.getElementsByClassName('btn-wishlist');
+        for (let i = 0; i < botonesCorazon.length; i++) {
+          if (listaDeseos.includes(botonesCorazon[i].dataset.id)) {
+            botonesCorazon[i].classList.add('activo');
+          } else {
+            botonesCorazon[i].classList.remove('activo');
+          }
+        }
+      }
+
+      function toggleWishlist(id) {
+        const nuevaLista = [];
+        let yaEstabaGuardado = false;
+
+        for (let i = 0; i < listaDeseos.length; i++) {
+          if (listaDeseos[i] === id) {
+            yaEstabaGuardado = true;
+          } else {
+            nuevaLista.push(listaDeseos[i]);
+          }
+        }
+
+        if (!yaEstabaGuardado) {
+          nuevaLista.push(id);
+        }
+
+        listaDeseos = nuevaLista;
+        localStorage.setItem('lista-deseos', JSON.stringify(listaDeseos));
+        actualizarIconos();
+      }
+
+      const botonesCarrito = document.getElementsByClassName('btn-carrito');
+      for (let i = 0; i < botonesCarrito.length; i++) {
+        botonesCarrito[i].onclick = function () {
+          const id = this.dataset.id;
+          const items = Carrito.obtenerCarrito();
+          let estaEnCarrito = false;
+          for (let j = 0; j < items.length; j++) {
+            if (items[j].id === id) {
+              estaEnCarrito = true;
+            }
+          }
+          if (estaEnCarrito) {
+            Carrito.eliminarItem(id);
+          } else {
+            Carrito.agregarItem(id, this.dataset.nombre, Number(this.dataset.precio));
+          }
+        };
+      }
+
+      const botonesCorazon = document.getElementsByClassName('btn-wishlist');
+      for (let i = 0; i < botonesCorazon.length; i++) {
+        botonesCorazon[i].onclick = function () {
+          toggleWishlist(this.dataset.id);
+        };
+      }
+
+      window.addEventListener('carrito:cambio', actualizarIconos);
+      actualizarIconos();
+    </script>
+
+    <div class="separador">
+      <span></span>
+      <img class="logo-separador" src="imagenes/Starbuckslogocirculo.png" alt="Logo Starbucks" />
+      <span></span>
+    </div>
+    <div class="redes-sociales">
+      <a href="https://www.facebook.com/Starbucks" target="_blank" rel="noopener"><img src="imagenes/Facebook.png" class="icono-red" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/starbucks" target="_blank" rel="noopener"><img src="imagenes/Instagram.png" class="icono-red" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/company/starbucks" target="_blank" rel="noopener"><img src="imagenes/Linkedin.png" class="icono-red" alt="LinkedIn" /></a>
+    </div>
+    <footer class="pie-pagina">
+      <div class="links-finales">
+        <a href="index.html">Home</a>
+        <a href="productos.html">Nuestros Productos</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="experiencia.html">Experiencia Starbucks</a>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("btnMenu").onclick = function () {
+        document.getElementById("menuLateral").classList.add("activo");
+        document.getElementById("overlay").classList.add("activo");
+      };
+      document.getElementById("btnCerrar").onclick = function () {
+        document.getElementById("menuLateral").classList.remove("activo");
+        document.getElementById("overlay").classList.remove("activo");
+      };
+      document.getElementById("overlay").onclick = function () {
+        document.getElementById("menuLateral").classList.remove("activo");
+        document.getElementById("overlay").classList.remove("activo");
+      };
+
+      function actualizarBadge() {
+        const badge = document.getElementById("cartBadge");
+        const count = Carrito.contarItems();
+        if (count > 0) {
+          badge.textContent = count;
+          badge.hidden = false;
+        } else {
+          badge.hidden = true;
+        }
+      }
+
+      actualizarBadge();
+      window.addEventListener("carrito:cambio", actualizarBadge);
+    </script>
+  </body>
+</html>

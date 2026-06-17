@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre Nosotros - Starbucks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="cart.js"></script>
+</head>
+<body class="pagina-interior">
+  <nav class="barra-navegacion">
+    <div class="logo-marca">
+      <a href="index.html"><img src="imagenes/Starbuckslogo.png" alt="Starbucks Logo" /></a>
+    </div>
+    <div class="nav-derecha">
+      <a href="checkout.html" class="nav-carrito" aria-label="Ver carrito">
+        🛒<span class="cart-badge" id="cartBadge" hidden>0</span>
+      </a>
+      <button class="menu-hamburguesa" id="btnMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <div class="menu-lateral" id="menuLateral">
+    <div class="menu-lateral-header">
+      <button class="btn-cerrar" id="btnCerrar">&#215;</button>
+    </div>
+    <nav class="menu-lateral-nav">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Nuestros Productos</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+      <a href="experiencia.html">Experiencia Starbucks</a>
+    </nav>
+  </div>
+
+  <section class="seccion-nosotros">
+    <h2 class="archivo-black-regular titulo-nosotros">SOBRE NOSOTROS</h2>
+
+    <div class="bloque-nosotros">
+      <div class="nosotros-foto">
+        <div class="foto-rect img-placeholder">
+          <img src="imagenes/nosotros-barista.png" alt="Barista Starbucks" />
+        </div>
+      </div>
+      <div class="nosotros-texto">
+        <h3 class="cita-marron">"Se trata de relacionarnos con las personas"</h3>
+        <p>Cada tienda forma parte de una comunidad y tomamos en serio nuestra responsabilidad como buenos vecinos. Queremos ser bienvenidos donde sea que hagamos negocios. Somos capaces de contribuir positivamente porque trabajamos para conseguir una unión entre partners, clientes y comunidad para cooperar cada día a día.</p>
+      </div>
+    </div>
+
+    <div class="bloque-nosotros-invertido">
+      <div class="nosotros-texto-amplio">
+        <p>Siempre ha sido y será una cuestión de calidad. Nos apasiona saber que tenemos un compromiso social y responsable con los proveedores de los mejores granos de café, y buscamos mejorarnos en todos los granos y mejorar la vida de la gente que los cultiva.</p>
+      </div>
+      <div class="nosotros-logo-cita">
+        <img src="imagenes/Starbuckslogocirculo.png" alt="Logo Starbucks" class="logo-nosotros" />
+        <h3 class="cita-marron">"Inspirar y nutrir"</h3>
+      </div>
+    </div>
+  </section>
+
+  <div class="separador">
+    <span></span>
+    <img class="logo-separador" src="imagenes/Starbuckslogocirculo.png" alt="Logo Starbucks" />
+    <span></span>
+  </div>
+  <div class="redes-sociales">
+    <a href="https://www.facebook.com/Starbucks" target="_blank" rel="noopener"><img src="imagenes/Facebook.png" class="icono-red" alt="Facebook" /></a>
+    <a href="https://www.instagram.com/starbucks" target="_blank" rel="noopener"><img src="imagenes/Instagram.png" class="icono-red" alt="Instagram" /></a>
+    <a href="https://www.linkedin.com/company/starbucks" target="_blank" rel="noopener"><img src="imagenes/Linkedin.png" class="icono-red" alt="LinkedIn" /></a>
+  </div>
+  <footer class="pie-pagina">
+    <div class="links-finales">
+      <a href="index.html">Home</a>
+      <a href="productos.html">Nuestros Productos</a>
+      <a href="nosotros.html">Sobre Nosotros</a>
+      <a href="experiencia.html">Experiencia Starbucks</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("btnMenu").onclick = function () {
+      document.getElementById("menuLateral").classList.add("activo");
+      document.getElementById("overlay").classList.add("activo");
+    };
+    document.getElementById("btnCerrar").onclick = function () {
+      document.getElementById("menuLateral").classList.remove("activo");
+      document.getElementById("overlay").classList.remove("activo");
+    };
+    document.getElementById("overlay").onclick = function () {
+      document.getElementById("menuLateral").classList.remove("activo");
+      document.getElementById("overlay").classList.remove("activo");
+    };
+
+    function actualizarBadge() {
+      const badge = document.getElementById("cartBadge");
+      const count = Carrito.contarItems();
+      if (count > 0) {
+        badge.textContent = count;
+        badge.hidden = false;
+      } else {
+        badge.hidden = true;
+      }
+    }
+
+    actualizarBadge();
+    window.addEventListener("carrito:cambio", actualizarBadge);
+  </script>
+</body>
+</html>
