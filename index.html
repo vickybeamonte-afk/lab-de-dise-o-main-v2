@@ -8,19 +8,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <script src="cart.js"></script>
   </head>
   <body>
     <nav class="barra-navegacion">
       <div class="logo-marca">
-        <img src="imagenes/Starbuckslogo.png" alt="Starbucks Logo" />
+        <a href="index.html"><img src="imagenes/Starbuckslogo.png" alt="Starbucks Logo" /></a>
       </div>
-
-      <button class="menu-hamburguesa">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <div class="nav-derecha">
+        <a href="checkout.html" class="nav-carrito" aria-label="Ver carrito">
+          🛒<span class="cart-badge" id="cartBadge" hidden>0</span>
+        </a>
+        <button class="menu-hamburguesa" id="btnMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </nav>
+    <div class="overlay" id="overlay"></div>
+    <div class="menu-lateral" id="menuLateral">
+      <div class="menu-lateral-header">
+        <button class="btn-cerrar" id="btnCerrar">&#215;</button>
+      </div>
+      <nav class="menu-lateral-nav">
+        <a href="index.html">Home</a>
+        <a href="productos.html">Nuestros Productos</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="experiencia.html">Experiencia Starbucks</a>
+      </nav>
+    </div>
 
     <section class="seccion-principal">
       <div class="caja-foto-grande">
@@ -72,7 +87,7 @@
         <p>
           El olor al café, a unos granos recién tostados, es la mejor bienvenida que cada día planificamos para brindarles cuando abrimos las puertas de nuestras tiendas. Pero eso es sólo el comienzo.
         </p>
-        <button class="boton-verde">Conocé más</button>
+        <button class="boton-verde" onclick="location.href='nosotros.html'">Conocé más</button>
       </div>
       <div class="foto-detalle">
         <img src="imagenes/IcedCoffeeLiquido.jpg" alt="Detalle Café" />
@@ -81,27 +96,51 @@
 
     <div class="separador">
       <span></span>
-      <img
-        class="logo-separador"
-        src="imagenes/Starbuckslogocirculo.png"
-        alt="Logo Starbucks"
-      />
+      <img class="logo-separador" src="imagenes/Starbuckslogocirculo.png" alt="Logo Starbucks" />
       <span></span>
     </div>
-
     <div class="redes-sociales">
-      <img src="imagenes/Facebook.png" class="icono-red" alt="FB" />
-      <img src="imagenes/Instagram.png" class="icono-red" alt="IG" />
-      <img src="imagenes/Linkedin.png" class="icono-red" alt="IN" />
+      <a href="https://www.facebook.com/Starbucks" target="_blank" rel="noopener"><img src="imagenes/Facebook.png" class="icono-red" alt="Facebook" /></a>
+      <a href="https://www.instagram.com/starbucks" target="_blank" rel="noopener"><img src="imagenes/Instagram.png" class="icono-red" alt="Instagram" /></a>
+      <a href="https://www.linkedin.com/company/starbucks" target="_blank" rel="noopener"><img src="imagenes/Linkedin.png" class="icono-red" alt="LinkedIn" /></a>
     </div>
-
     <footer class="pie-pagina">
       <div class="links-finales">
-        <a href="#">Sobre nosotros</a>
-        <a href="#">Impacto social</a>
-        <a href="#">Atención al cliente</a>
-        <a href="#">Experiencia Starbucks</a>
+        <a href="index.html">Home</a>
+        <a href="productos.html">Nuestros Productos</a>
+        <a href="nosotros.html">Sobre Nosotros</a>
+        <a href="experiencia.html">Experiencia Starbucks</a>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("btnMenu").onclick = function () {
+        document.getElementById("menuLateral").classList.add("activo");
+        document.getElementById("overlay").classList.add("activo");
+      };
+      document.getElementById("btnCerrar").onclick = function () {
+        document.getElementById("menuLateral").classList.remove("activo");
+        document.getElementById("overlay").classList.remove("activo");
+      };
+      document.getElementById("overlay").onclick = function () {
+        document.getElementById("menuLateral").classList.remove("activo");
+        document.getElementById("overlay").classList.remove("activo");
+      };
+
+      function actualizarBadge() {
+        const badge = document.getElementById("cartBadge");
+        const count = Carrito.contarItems();
+        if (count > 0) {
+          badge.textContent = count;
+          badge.hidden = false;
+        } else {
+          badge.hidden = true;
+        }
+      }
+
+      actualizarBadge();
+      window.addEventListener("carrito:cambio", actualizarBadge);
+    </script>
+    <script src="funciones.js"></script>
   </body>
 </html>
