@@ -170,6 +170,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 60px 20px;
+  background-color: #ece6d6;
 }
 
 .texto-historia {
@@ -232,7 +233,7 @@ body {
 
 .logo-separador {
   width: auto;
-  height: 40px;
+  height: 90px;
   display: block;
   flex-shrink: 0;
 }
@@ -252,6 +253,7 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 20px 20px 20px;
+  text-align: center;
 }
 
 .icono-red {
@@ -325,4 +327,582 @@ body {
   font-family: "Archivo Black", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  z-index: 200;
+}
+.overlay.activo {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100vh;
+  background: #2e4b2a;
+  display: flex;
+  flex-direction: column;
+  z-index: 300;
+  transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-lateral.activo {
+  right: 0;
+}
+
+.menu-lateral-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.menu-lateral-header img {
+  height: 28px;
+  filter: brightness(0) invert(1);
+}
+
+.btn-cerrar {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 28px;
+  line-height: 1;
+  padding: 0;
+}
+
+.menu-lateral-nav {
+  flex: 1;
+  padding: 24px 0;
+  overflow-y: auto;
+}
+.menu-lateral-nav a {
+  display: block;
+  padding: 14px 28px;
+  color: #d4ccb4;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-left: 3px solid transparent;
+  transition: background 0.2s, color 0.2s;
+}
+.menu-lateral-nav a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+  border-left-color: #688662;
+}
+.seccion-titulo {
+  padding: 20px 28px 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 700;
+}
+
+site-navbar,
+site-footer {
+  display: block;
+}
+
+.pagina-interior .barra-navegacion {
+  position: relative;
+  background-color: #f4f1ea;
+}
+
+.img-placeholder {
+  background-color: #d4ccb4;
+}
+
+.seccion-productos {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.seccion-productos .contenedor-arcos {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.titulo-productos {
+  color: #9a7453;
+  margin-bottom: 30px;
+}
+
+.grupo-categoria {
+  margin-bottom: 40px;
+}
+
+.banda-categoria {
+  background-color: #1e3932;
+  color: white;
+  text-align: center;
+  padding: 10px 20px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.tarjeta-producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tarjeta-producto p {
+  margin-top: 8px;
+  min-height: 2.8em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+.acciones-producto {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.btn-accion {
+  background: none;
+  border: 1px solid #1e3932;
+  color: #1e3932;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-accion img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.btn-accion.activo {
+  background-color: #1e3932;
+  border-color: #1e3932;
+}
+
+.btn-accion.activo img {
+  filter: brightness(0) invert(1);
+}
+
+.seccion-checkout {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.titulo-checkout {
+  color: #9a7453;
+  margin-bottom: 30px;
+}
+
+.panel-compra {
+  background-color: #ece6d6;
+  padding: 30px 24px;
+}
+
+.campo-direccion label {
+  display: block;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #9a7453;
+  margin-bottom: 10px;
+}
+
+.input-direccion {
+  width: 100%;
+  border: 2px solid #688662;
+  background: transparent;
+  padding: 10px 12px;
+  font-size: 1rem;
+  outline: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.campo-pago {
+  margin-top: 30px;
+}
+
+.subtitulo-pago {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #9a7453;
+  margin-bottom: 12px;
+}
+
+.fila-pago {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border: 1px solid #c8c0a8;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.fila-pago input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #688662;
+  cursor: pointer;
+}
+
+.resumen-compra {
+  margin-top: 30px;
+}
+
+.resumen-fila {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.95rem;
+  border-bottom: 1px solid #c8c0a8;
+}
+
+.total-caja {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  padding: 14px 16px;
+  margin-top: 12px;
+  font-family: "Archivo Black", sans-serif;
+  font-size: 1.1rem;
+}
+
+.checkout-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.boton-pagar {
+  background-color: #d4ccb4;
+  color: #1e3932;
+  border: none;
+  padding: 12px 24px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.ilustracion-checkout {
+  width: 100%;
+  margin-top: 40px;
+  height: 240px;
+  overflow: hidden;
+}
+
+.ilustracion-checkout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.forma-arco-grande {
+  width: 80%;
+  max-width: 320px;
+  aspect-ratio: 4 / 5;
+  border-radius: 200px 200px 10px 10px;
+  overflow: hidden;
+}
+
+.forma-arco-grande img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.seccion-nosotros {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.titulo-nosotros {
+  color: #9a7453;
+  margin-bottom: 30px;
+}
+
+.bloque-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.foto-rect {
+  width: 100%;
+  max-width: 380px;
+  height: 340px;
+  overflow: hidden;
+  background-color: #d4ccb4;
+}
+
+.foto-rect img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cita-marron {
+  font-family: "Archivo Black", sans-serif;
+  color: #9a7453;
+  font-size: 1.4rem;
+  line-height: 1.3;
+  margin-bottom: 16px;
+}
+
+.nosotros-texto p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.bloque-nosotros-invertido {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background-color: #ece6d6;
+  padding: 30px 20px;
+}
+
+.nosotros-texto-amplio p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.nosotros-logo-cita {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-nosotros {
+  width: 100px;
+  height: auto;
+}
+
+.seccion-experiencia {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.titulo-experiencia {
+  color: #9a7453;
+  margin-bottom: 30px;
+}
+
+.tarjeta-experiencia {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.tarjeta-experiencia .forma-arco-grande {
+  margin: 0 auto;
+}
+
+.banda-experiencia {
+  background-color: #d4ccb4;
+  padding: 14px 20px;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .bloque-nosotros {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nosotros-foto {
+    flex: 0 0 40%;
+  }
+
+  .nosotros-texto {
+    flex: 1;
+  }
+
+  .bloque-nosotros-invertido {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nosotros-texto-amplio {
+    flex: 1;
+  }
+
+  .nosotros-logo-cita {
+    flex: 0 0 35%;
+  }
+
+  .banda-experiencia {
+    max-width: 100%;
+    width: 80%;
+  }
+
+  .seccion-productos .contenedor-arcos {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .seccion-experiencia {
+    max-width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    align-items: flex-start;
+  }
+
+  .titulo-experiencia {
+    flex: 0 0 100%;
+  }
+
+  .tarjeta-experiencia {
+    flex: 1;
+  }
+
+  .tarjeta-experiencia .banda-experiencia {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.nav-derecha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nav-carrito {
+  position: relative;
+  font-size: 22px;
+  line-height: 1;
+  text-decoration: none;
+  color: inherit;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #688662;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.badge-lateral {
+  background: #688662;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.precio-producto {
+  font-size: 13px;
+  color: #688662;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+/* Checkout cart rows */
+.resumen-fila {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #c8c0a8;
+}
+
+.resumen-nombre {
+  flex: 1;
+  font-size: 14px;
+}
+
+.btn-remove {
+  background: none;
+  border: 1px solid #9a7453;
+  color: #9a7453;
+  cursor: pointer;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+
+.resumen-precio {
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.carrito-vacio {
+  padding: 16px 0;
+  text-align: center;
+  color: #7a7f73;
+  font-size: 14px;
+}
+
+.mensaje-exito {
+  text-align: center;
+  padding: 12px;
+  background: #e8f5e2;
+  border-radius: 8px;
+  color: #1e3932;
+  font-weight: 700;
+  margin-top: 12px;
+  font-family: 'Lexend Deca', sans-serif;
 }
