@@ -802,7 +802,38 @@ site-footer {
     max-width: 100%;
     width: 100%;
   }
+
+  .seccion-checkout {
+    max-width: 700px;
+  }
+
+  .ilustracion-checkout {
+    height: 300px;
+  }
+
+  .seccion-contacto {
+    max-width: 900px;
+  }
+
+  .info-contacto {
+    display: flex;
+    gap: 40px;
+  }
+
+  .dato-contacto {
+    flex: 1;
+  }
+
+  .carrusel {
+    height: 360px;
+  }
+
+  .seccion-equipo {
+    max-width: 900px;
+  }
 }
+
+
 
 .nav-derecha {
   display: flex;
@@ -836,6 +867,7 @@ site-footer {
   font-family: 'Lexend Deca', sans-serif;
 }
 
+
 .badge-lateral {
   background: #688662;
   color: #fff;
@@ -852,6 +884,7 @@ site-footer {
   vertical-align: middle;
 }
 
+
 .precio-producto {
   font-size: 13px;
   color: #688662;
@@ -859,7 +892,7 @@ site-footer {
   margin: 0 0 4px;
 }
 
-/* Checkout cart rows */
+
 .resumen-fila {
   display: flex;
   align-items: center;
@@ -889,6 +922,7 @@ site-footer {
   white-space: nowrap;
 }
 
+/* Empty cart + success message */
 .carrito-vacio {
   padding: 16px 0;
   text-align: center;
@@ -905,4 +939,121 @@ site-footer {
   font-weight: 700;
   margin-top: 12px;
   font-family: 'Lexend Deca', sans-serif;
+}
+
+
+
+.seccion-contacto {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.titulo-contacto {
+  color: #9a7453;
+  margin-bottom: 30px;
+}
+
+.info-contacto {
+  background-color: #ece6d6;
+  padding: 30px 24px;
+  margin-bottom: 30px;
+}
+
+.dato-contacto {
+  margin-bottom: 20px;
+}
+
+.dato-contacto:last-child {
+  margin-bottom: 0;
+}
+
+.dato-contacto p {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  color: #1e3932;
+  margin-top: 6px;
+}
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background-color: #d4ccb4;
+}
+
+.carrusel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carrusel-controles {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.btn-carrusel {
+  background: none;
+  border: 1px solid #1e3932;
+  color: #1e3932;
+  width: 36px;
+  height: 36px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrusel-puntos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c8c0a8;
+  cursor: pointer;
+  border: none;
+}
+
+.punto.activo {
+  background-color: #688662;
+}
+
+
+
+.seccion-equipo {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+.titulo-equipo {
+  color: #9a7453;
+  margin-bottom: 20px;
+}
+
+
+
+.foto-rect-chica {
+  max-width: 260px;
+  height: 220px;
+}
+
+.barra-navegacion-home {
+  left: auto;
+  right: 0;
+  transform: none;
 }
