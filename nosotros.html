@@ -34,6 +34,7 @@
       <a href="productos.html">Nuestros Productos</a>
       <a href="nosotros.html">Sobre Nosotros</a>
       <a href="experiencia.html">Experiencia Starbucks</a>
+      <a href="contactanos.html">Contáctanos</a>
     </nav>
   </div>
 
@@ -42,7 +43,7 @@
 
     <div class="bloque-nosotros">
       <div class="nosotros-foto">
-        <div class="foto-rect img-placeholder">
+        <div class="foto-rect foto-rect-chica img-placeholder">
           <img src="imagenes/nosotros-barista.png" alt="Barista Starbucks" />
         </div>
       </div>
@@ -63,6 +64,60 @@
     </div>
   </section>
 
+  <section class="seccion-equipo">
+    <h2 class="archivo-black-regular titulo-equipo">SUMATE A NUESTRO EQUIPO</h2>
+    <div class="panel-compra">
+      <div class="campo-direccion">
+        <label>Nombre Completo</label>
+        <input type="text" class="input-direccion" />
+      </div>
+
+      <div class="campo-direccion" style="margin-top: 20px;">
+        <label>Teléfono</label>
+        <input type="text" class="input-direccion" />
+      </div>
+
+      <div class="campo-pago">
+        <p class="subtitulo-pago">Disponibilidad Horaria</p>
+        <label class="fila-pago">
+          <input type="radio" name="disponibilidad" />
+          Mañana
+        </label>
+        <label class="fila-pago">
+          <input type="radio" name="disponibilidad" />
+          Tarde
+        </label>
+        <label class="fila-pago">
+          <input type="radio" name="disponibilidad" />
+          Noche
+        </label>
+        <label class="fila-pago">
+          <input type="radio" name="disponibilidad" />
+          Fin de semana
+        </label>
+      </div>
+
+      <div class="campo-direccion" style="margin-top: 20px;">
+        <label>Experiencia Previa</label>
+        <input type="text" class="input-direccion" />
+      </div>
+
+      <div class="checkout-acciones">
+        <button type="button" class="boton-pagar" id="btnEnviarEquipo">Enviar</button>
+      </div>
+
+      <div id="mensaje-equipo" class="mensaje-exito" hidden>
+        <p>Te contactaremos en unos días.</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("btnEnviarEquipo").onclick = function () {
+      document.getElementById("mensaje-equipo").hidden = false;
+    };
+  </script>
+
   <div class="separador">
     <span></span>
     <img class="logo-separador" src="imagenes/Starbuckslogocirculo.png" alt="Logo Starbucks" />
@@ -79,6 +134,7 @@
       <a href="productos.html">Nuestros Productos</a>
       <a href="nosotros.html">Sobre Nosotros</a>
       <a href="experiencia.html">Experiencia Starbucks</a>
+      <a href="contactanos.html">Contáctanos</a>
     </div>
   </footer>
 
